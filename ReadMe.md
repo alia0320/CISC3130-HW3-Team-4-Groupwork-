@@ -39,7 +39,7 @@ Question 2: How do generics prevent runtime errors here?
 
 The list is declared as:
 
-ArrayList<Integer> numbers = new ArrayList<>();
+    ArrayList<Integer> numbers = new ArrayList<>();
 
 Generics ensure:
 
@@ -51,7 +51,7 @@ No casting is required when retrieving elements.
 
 Example of something that would fail at compile time:
 
-numbers.add("hello"); // Not allowed
+    numbers.add("hello"); // Not allowed
 
 Because of generics, many errors are caught before the program runs, reducing runtime crashes.
 
@@ -61,13 +61,13 @@ What would happen if you removed items using numbers.remove() inside the loop?
 
 If you used something like this:
 
-ArrayList<Integer> numCopy = (ArrayList<Integer>) numbers.clone();
-		Iterator<Integer> iterator = numbers.iterator();
-		while (iterator.hasNext()) { 
-			if (current % 2 == 0) { 
-				iterator.remove(); // Problem
-			}
-		}
+    ArrayList<Integer> numCopy = (ArrayList<Integer>) numbers.clone();
+            Iterator<Integer> iterator = numbers.iterator();
+            while (iterator.hasNext()) { 
+                if (current % 2 == 0) { 
+                    iterator.remove(); // Problem
+                }
+            }
 
 This would likely cause a ConcurrentModificationException because:
 
