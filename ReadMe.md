@@ -6,18 +6,18 @@ You will remove elements safely while iterating and understand why Java generics
 
 Task Setup
 
-    Add 10 numbers.
+Add 10 numbers.
 
 Group Task
 
-    Use an Iterator to remove all even numbers.
-    Then add the value 0 to the list.
-    Why must removal happen through the Iterator?
-    How do generics prevent runtime errors here?
+Use an Iterator to remove all even numbers.
+Then add the value 0 to the list.
+Why must removal happen through the Iterator?
+How do generics prevent runtime errors here?
 
 Critical Thinking
 
-    What would happen if you removed items using numbers.remove() inside the loop?
+What would happen if you removed items using numbers.remove() inside the loop?
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Questions and Answers
@@ -29,7 +29,7 @@ If you remove elements directly from the list while iterating, the collection ch
 
 Using:
 
-iterator.remove();
+    iterator.remove();
 
 keeps the iteration consistent and safe.
 
